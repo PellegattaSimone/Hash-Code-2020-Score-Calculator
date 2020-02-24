@@ -11,7 +11,7 @@ All you need is one of the two versions and the *data* folder, put on its same f
 
 
 ## Executable files
-There is also an already-compiled version into [*executables*](/exe) folder.
+There is also an already-compiled version into [*exe*](/exe) folder.
 Executable files do not require any .dll to work, but they need .hashcode files located into "data" folder.
 
 You have to put the .exe file in the same folder as your file ([mono-file version](/exe/monofile-version/)) or your whole submission ([multi-file version](exe/multifile-version/)).
