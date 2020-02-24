@@ -317,8 +317,8 @@ int main()
 
 			//end of the file
 			std::clog << "Closing...";
-
 			close(sub, in);
+
 			return EXIT_SUCCESS;
 		}
 		else throw std::runtime_error("File missing\nPut in this folder your submission named as Google's input file (e.g. a_example.txt)");
