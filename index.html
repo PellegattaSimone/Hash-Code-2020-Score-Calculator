@@ -11,12 +11,12 @@
     }
     h1{
       text-align:center;
-      font-size:4em;
+      font-size:3.3vw;
     }
     div {
       text-align:justify;
-      position:50%;
-      font-size:2em;
+      font-size:1.5vw;
+      margin: 5vh 1vw;
     }
 
     .description {
@@ -27,34 +27,39 @@
     .description:active {color:#555;}
 
     nav {
-      margin:50px 20%;
+      margin:5vh 23vw;
     }
     .nav {
       display:flex;
-      float:left;
       align-items:center;
 
       text-decoration:none;
       color:white;
       font-family:"Sans-Serif";
-      font-size:1.5em;
+      font-size:1.3vw;
       font-weight:bold;
 
-      width:20rem;
-      height:80px;
+      width:20vw;
+      height:3em;
 
-      margin:35px 10%;
-      padding:10px;
+      padding:1vh;
+      margin-bottom:6vh;
 
       background-color:#05F;
-      border:2px dashed;
+      border:0.25vh dashed;
       border-color:white;
-      border-radius:15px;
+      border-radius:1.5vh;
+    }
+    .nav.left {
+        float:left;
+    }
+    .nav.right {
+        float:right;
     }
     img {
-      width:60px;
-      height:60px;
-      margin:15px;
+      width:3.5vw;
+      margin-right:1vw;
+      margin-left:0.5vw;
     }
   </style>
 
@@ -64,23 +69,19 @@
 
   <h1>~ Score Calculator ~</h1>
 
-  <br />
-
   <div>
-    It works as <a class="description" href="https://hashcodejudge.withgoogle.com/" target="_blank">Google's Hash Code 2020 Judge System</a>: you can calculate your score without creating a whole submission or you can test your files befone sending it to <a class="description" href="https://codingcompetitions.withgoogle.com/hashcode" target="_blank">Google</a>.
+    It works as <a class="description" href="https://hashcodejudge.withgoogle.com/" target="_blank">Google's Hash Code 2020 Judge System</a>: you can calculate your score without creating a whole submission or you can test your files before sending it to <a class="description" href="https://codingcompetitions.withgoogle.com/hashcode" target="_blank">Google</a>.
   </div>
 
-  <br />
-
   <nav>
-    <a class="nav" href="http://www.mediafire.com/folder/pyhaewgizjimb"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Full folder</a>
-    <a class="nav" href="http://www.mediafire.com/file/em25u2rbxvbxuhx"><img src="https://www.svgrepo.com/show/144384/zip.svg" />ZIP archive</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/tjftl0obi9jeo3r"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator x86</a>
-    <a class="nav" href="http://www.mediafire.com/file/r3bcd0ntuv8bwn6"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator x64</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/drwp86tv26u1fs2"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator x86</a>
-    <a class="nav" href="http://www.mediafire.com/file/2ogmhjbkrry6mkp"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator x64</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/9wkxoyz6nuetw4x"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator Source Code</a>
-    <a class="nav" href="http://www.mediafire.com/file/gm4ngpnq3vz9d19"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator Source Code</a><br />
+    <a class="nav left" href="http://www.mediafire.com/folder/pyhaewgizjimb"><img src="http://icon-library.com/images/transparent-folder-icon/transparent-folder-icon-28.jpg" />Full folder</a>
+    <a class="nav right" href="http://www.mediafire.com/file/em25u2rbxvbxuhx"><img src="https://image.flaticon.com/icons/svg/2306/2306214.svg" />ZIP archive</a><br />
+    <a class="nav left" href="http://www.mediafire.com/file/tjftl0obi9jeo3r"><img src="https://image.flaticon.com/icons/svg/136/136531.svg" />Submission Calculator x86</a>
+    <a class="nav right" href="http://www.mediafire.com/file/r3bcd0ntuv8bwn6"><img src="https://image.flaticon.com/icons/svg/136/136531.svg" />Submission Calculator x64</a><br />
+    <a class="nav left" href="http://www.mediafire.com/file/drwp86tv26u1fs2"><img src="https://image.flaticon.com/icons/svg/136/136531.svg" />File Calculator x86</a>
+    <a class="nav right" href="http://www.mediafire.com/file/2ogmhjbkrry6mkp"><img src="https://image.flaticon.com/icons/svg/136/136531.svg" />File Calculator x64</a><br />
+    <a class="nav left" href="http://www.mediafire.com/file/9wkxoyz6nuetw4x"><img src="https://image.flaticon.com/icons/svg/2306/2306030.svg" />Submission Calculator Source Code</a>
+    <a class="nav right" href="http://www.mediafire.com/file/gm4ngpnq3vz9d19"><img src="https://image.flaticon.com/icons/svg/2306/2306030.svg" />File Calculator Source Code</a><br />
   </nav>
 
 <body>
