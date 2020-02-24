@@ -164,13 +164,15 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 			try {
 				if (!in) throw std::runtime_error("Please do not delete or rename .hashcode data files");
 
-				//first line
-				std::string line;
-				getline(in, line);
+				{
+					//first line
+					std::string line;
+					getline(in, line);
 
-				in_library::totalbooks = 0;
-				in_library::libs = 0;
-				in_library::days = 0;
+					in_library::totalbooks = 0;
+					in_library::libs = 0;
+					in_library::days = 0;
+				}
 
 				pos = 0;
 				read(line, [&]() ->unsigned int& { return (!pos ? in_library::totalbooks : (!(pos - 1) ? in_library::libs : in_library::days)); }, pos);
