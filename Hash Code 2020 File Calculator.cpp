@@ -197,12 +197,14 @@ int main()
 			try {
 				if (!in) throw std::runtime_error("Please do not delete or rename .hashcode data files");
 
-				//first line
-				std::string line;
-				getline(in, line);
+				{
+					//first line
+					std::string line;
+					getline(in, line);
 
-				pos = 0;
-				read(line, [&]() ->unsigned int& { return (!pos ? in_library::totalbooks : (!(pos - 1) ? in_library::libs : in_library::days)); }, pos);
+					pos = 0;
+					read(line, [&]() ->unsigned int& { return (!pos ? in_library::totalbooks : (!(pos - 1) ? in_library::libs : in_library::days)); }, pos);
+				}
 
 				if (out_library::libnum <= in_library::libs) //valid file
 				{
