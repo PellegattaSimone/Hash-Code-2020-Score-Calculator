@@ -1,5 +1,5 @@
 /* ~~ Hash Code 2020 Score Calculator by Foxel ~~ */
-/* ~~~~~~~~~~~~~ Multi-File Version ~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ Multi-File Version ~~~~~~~~~~~~~~ */
 
 #include <iostream>
 #include <fstream>
@@ -24,9 +24,9 @@ struct out_library : library
 
 struct in_library : library
 {
-	inline static unsigned int totalbooks = 0;
-	inline static unsigned int libs = 0;
-	inline static unsigned int days = 0;
+	inline static unsigned int totalbooks;
+	inline static unsigned int libs;
+	inline static unsigned int days;
 	inline static std::vector<unsigned short> scores;
 
 	//int booksnum
@@ -94,16 +94,17 @@ void printout(std::vector<in_library>& models)
 
 void close(std::ifstream& sub, std::ifstream& in)
 {
+	in_library::scores.clear();
 	sub.close();
 	sub.clear();
 	in.close();
 	in.clear();
 }
 
-bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in, const std::string& inpath)
+bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in, const std::string& inpath, unsigned int& totalscore)
 {
 	//opening files
-	std::clog << "Opening " << subpath << "..." << std::endl;
+	std::clog << std::endl << "Opening " << subpath << "..." << std::endl;
 
 	sub.open(subpath, std::ios_base::in);
 	in.open(inpath, std::ios_base::in);
@@ -116,8 +117,6 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 
 
 			//reading submission
-			std::clog << "Reading submission..." << std::endl;
-
 			std::vector<out_library> libraries;
 
 			try {
@@ -160,8 +159,6 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 
 
 			//reading data
-			std::clog << "Reading data..." << std::endl;
-
 			std::vector<in_library> models;
 
 			try {
@@ -170,6 +167,10 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 				//first line
 				std::string line;
 				getline(in, line);
+
+				in_library::totalbooks = 0;
+				in_library::libs = 0;
+				in_library::days = 0;
 
 				pos = 0;
 				read(line, [&]() ->unsigned int& { return (!pos ? in_library::totalbooks : (!(pos - 1) ? in_library::libs : in_library::days)); }, pos);
@@ -218,8 +219,6 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 
 
 			//calculating the score
-			std::clog << "Calculating the score..." << std::endl;
-
 			unsigned int score = 0;
 
 			{
@@ -265,32 +264,16 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 					}
 				}
 			}
-			std::cout << std::endl << "Your score: " << score;
-
-
-			//print files
-			std::cout << "\n\nDo you want to print your file? (enter to skip)";
-
-			std::string choose;
-			getline(std::cin, choose);
-			if (choose[0] != '\0') printin(libraries);
-
-			std::cout << "\n\nDo you want to print google input dataset? (enter to skip)";
-
-			getline(std::cin, choose);
-			if (choose[0] != '\0')
-			{
-				printout(models);
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	//previous getchar()
-			}
+			std::cout << std::endl << "Your score: " << score << "\n\n";
+			totalscore += score;
 		}
 		else throw std::runtime_error("File missing\nPut in this folder your submission named as Google's input file (e.g. " + subpath + ")");
 
 
 		//end of the file
-		std::clog << "Closing...";
-
+		std::clog << "Closing " << subpath << "...";
 		close(sub, in);
+
 		return EXIT_SUCCESS;
 	}
 	catch (std::runtime_error e)
@@ -305,16 +288,22 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 
 int main()
 {
-	std::clog << "Hash Code 2020 Score Calculator By Foxel\n           Multi-File Version            \n\n";
+	std::clog << "Hash Code 2020 Score Calculator By Foxel\n           Multi-File Version            ";
 
 	std::ifstream sub, in;
+	unsigned int totalscore = 0;
 
-	if (calculate(sub, "a_example.txt", in, "data/a_example.hashcode"))
-		if (calculate(sub, "b_read_on.txt", in, "data/b_read_on.hashcode"))
-			if (calculate(sub, "c_incunabula.txt", in, "data/c_incunabula.hashcode"))
-				if (calculate(sub, "d_tough_choices.txt", in, "data/d_tough_choices.hashcode"))
-					if (calculate(sub, "e_so_many_books.txt", in, "data/e_so_many_books.hashcode"))
-						if (calculate(sub, "f_libraries_of_the_world.txt", in, "f_libraries_of_the_world.hashcode"))
+	if (!calculate(sub, "a_example.txt", in, "data/a_example.hashcode", totalscore))
+		if (!calculate(sub, "b_read_on.txt", in, "data/b_read_on.hashcode", totalscore))
+			if (!calculate(sub, "c_incunabula.txt", in, "data/c_incunabula.hashcode", totalscore))
+				if (!calculate(sub, "d_tough_choices.txt", in, "data/d_tough_choices.hashcode", totalscore))
+					if (!calculate(sub, "e_so_many_books.txt", in, "data/e_so_many_books.hashcode", totalscore))
+						if (!calculate(sub, "f_libraries_of_the_world.txt", in, "data/f_libraries_of_the_world.hashcode", totalscore))
+						{
+							std::cout << "\n\n\nTotal score: " << totalscore;
+							(void)getchar();
+
 							return EXIT_SUCCESS;
+						}
 	return EXIT_FAILURE;
 }
