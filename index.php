@@ -74,14 +74,14 @@
   <br />
 
   <nav>
-    <a class="nav" href="http://www.mediafire.com/folder/pyhaewgizjimb"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><Full folder</a>
-    <a class="nav" href="http://www.mediafire.com/file/em25u2rbxvbxuhx"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><ZIP archive</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/tjftl0obi9jeo3r"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><Submission Calculator x86</a>
-    <a class="nav" href="http://www.mediafire.com/file/r3bcd0ntuv8bwn6"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><Submission Calculator x64</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/drwp86tv26u1fs2"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><File Calculator x86</a>
-    <a class="nav" href="http://www.mediafire.com/file/2ogmhjbkrry6mkp"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><File Calculator x64</a><br />
-    <a class="nav" href="http://www.mediafire.com/file/9wkxoyz6nuetw4x"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><Submission Calculator Source Code</a>
-    <a class="nav" href="http://www.mediafire.com/file/gm4ngpnq3vz9d19"><img src="https://www.svgrepo.com/show/144384/zip.svg" /><File Calculator Source Code</a><br />
+    <a class="nav" href="http://www.mediafire.com/folder/pyhaewgizjimb"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Full folder</a>
+    <a class="nav" href="http://www.mediafire.com/file/em25u2rbxvbxuhx"><img src="https://www.svgrepo.com/show/144384/zip.svg" />ZIP archive</a><br />
+    <a class="nav" href="http://www.mediafire.com/file/tjftl0obi9jeo3r"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator x86</a>
+    <a class="nav" href="http://www.mediafire.com/file/r3bcd0ntuv8bwn6"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator x64</a><br />
+    <a class="nav" href="http://www.mediafire.com/file/drwp86tv26u1fs2"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator x86</a>
+    <a class="nav" href="http://www.mediafire.com/file/2ogmhjbkrry6mkp"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator x64</a><br />
+    <a class="nav" href="http://www.mediafire.com/file/9wkxoyz6nuetw4x"><img src="https://www.svgrepo.com/show/144384/zip.svg" />Submission Calculator Source Code</a>
+    <a class="nav" href="http://www.mediafire.com/file/gm4ngpnq3vz9d19"><img src="https://www.svgrepo.com/show/144384/zip.svg" />File Calculator Source Code</a><br />
   </nav>
 
 <body>
