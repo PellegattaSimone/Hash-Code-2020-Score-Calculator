@@ -1,5 +1,5 @@
 /* ~~ Hash Code 2020 Score Calculator by Foxel ~~ */
-/* ~~~~~~~~~~~~~ Mono-File Version ~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~ Multi-File Version ~~~~~~~~~~~~~~ */
 
 #include <iostream>
 #include <fstream>
@@ -305,7 +305,7 @@ bool calculate(std::ifstream& sub, const std::string& subpath, std::ifstream& in
 
 int main()
 {
-	std::clog << "Hash Code 2020 Score Calculator By Foxel\n           Mono-File Version            \n\n";
+	std::clog << "Hash Code 2020 Score Calculator By Foxel\n           Multi-File Version            \n\n";
 
 	std::ifstream sub, in;
 
