@@ -197,9 +197,10 @@ int main()
 			try {
 				if (!in) throw std::runtime_error("Please do not delete or rename .hashcode data files");
 
+				std::string line;
+
 				{
 					//first line
-					std::string line;
 					getline(in, line);
 
 					pos = 0;
