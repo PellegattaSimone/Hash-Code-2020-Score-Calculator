@@ -1,6 +1,6 @@
 # Hash Code 2020 Score Calculator
 
-It works as [Google's Hash Code 2020 Judge System](https://hashcodejudge.withgoogle.com/): you can calculate your score without creating a whole submission or you can test your files before sending it to [Google](https://codingcompetitions.withgoogle.com/hashcode).
+It works as [Google's Hash Code 2020 Judge System](https://hashcodejudge.withgoogle.com/): you can calculate your score without creating a whole submission or you can test your files before sending them to [Google](https://codingcompetitions.withgoogle.com/hashcode).
 
 ## Soruce Code
 There are **two** version of the project:
