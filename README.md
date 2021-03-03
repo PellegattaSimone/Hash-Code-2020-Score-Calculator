@@ -19,4 +19,4 @@ If you want to use the multi-file version, just pur all your submission files in
 
 You also need to put [*data*](/data) folder in the same folder as the executable (you can find it in the root of this repository)
 
-## [Project Page](https://bit.ly/HashCode)
+## [Project Page](https://bit.ly/HashCodeCalculator)
